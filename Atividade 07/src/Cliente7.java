@@ -5,7 +5,9 @@ public class Cliente7 {
 
   public static void main(String[] args) {
     try {
-      Registry registry = LocateRegistry.getRegistry();
+      String host = "192.168.0.107";
+      int port = 1099;
+      Registry registry = LocateRegistry.getRegistry(host, port);
       BarbeiroInterface barbeiro = (BarbeiroInterface) registry.lookup(
         "Barbeiro"
       );
